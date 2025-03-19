@@ -74,7 +74,10 @@ footer {
 .social-links img {
     width: 30px;
     margin: 10px;
-    color: white;
+}
+
+.card img {
+    width: 50px;
 }
 
 #header-img {
