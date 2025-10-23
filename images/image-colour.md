@@ -1,0 +1,1 @@
+The color of the images is #00D4A0
