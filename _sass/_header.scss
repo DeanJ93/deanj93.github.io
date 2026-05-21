@@ -1,0 +1,41 @@
+header {
+    background: $secondary-color;
+    color: $white;
+    padding: $spacing-large 0;
+    
+    h1 {
+        margin: $spacing-small 0;
+        font-size: 2.5em;
+    }
+    
+    p {
+        font-size: 1.2em;
+        margin: $spacing-small 0;
+    }
+}
+
+#header-img {
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: $spacing-medium;
+}
+
+.social-links {
+    margin-top: $spacing-medium;
+    
+    img {
+        width: 30px;
+        height: 30px;
+        margin: $spacing-small;
+        transition: transform $transition-speed;
+        
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    
+    a {
+        display: inline-block;
+    }
+}
