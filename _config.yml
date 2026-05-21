@@ -1,0 +1,82 @@
+# Site settings
+title: Dev With Dean
+description: Programmer - IT Professional
+url: "https://devwithdean.com"
+baseurl: ""
+
+# Author information
+author:
+  name: Dean
+  email: 
+  twitter: devwithdean
+  github: DeanJ93
+  instagram: devwithdean
+  reddit: StomachExpert8659
+
+# Social links
+social:
+  twitter: https://x.com/devwithdean
+  instagram: https://www.instagram.com/devwithdean/
+  reddit: https://www.reddit.com/user/StomachExpert8659/
+  github: https://github.com/DeanJ93
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+timezone: America/New_York
+
+# Pagination settings
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate-v2
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Sass/SCSS settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Dean"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
