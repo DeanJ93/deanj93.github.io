@@ -1,0 +1,60 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size-base;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: $light-bg;
+    line-height: 1.6;
+    color: $text-dark;
+}
+
+h1, h2, h3, h4, h5, h6, .btn { 
+    text-transform: capitalize;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: color $transition-speed;
+    
+    &:hover {
+        color: darken($primary-color, 10%);
+    }
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: $spacing-medium;
+    max-width: 1200px;
+}
+
+.btn {
+    display: inline-block;
+    padding: $spacing-small $spacing-medium;
+    background: $primary-color;
+    color: $white;
+    text-decoration: none;
+    border-radius: $border-radius;
+    margin: 5px;
+    transition: background $transition-speed;
+    
+    &:hover {
+        background: darken($primary-color, 10%);
+        color: $white;
+    }
+}
+
+main {
+    min-height: calc(100vh - 400px);
+}
