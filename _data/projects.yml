@@ -1,0 +1,17 @@
+- name: Space Invaders
+  description: A space invaders game built with Python and Turtle Graphics
+  image: space.svg
+  github: https://github.com/DeanJ93/space_invaders/tree/main
+  demo:
+
+- name: Quiz Game
+  description: A quiz game written in JavaScript that uses the Open Trivia Database.
+  image: question.svg
+  github: https://github.com/DeanJ93/JSQuizGame
+  demo: http://devwithdean.com/JSQuizGame/
+
+- name: Cafe Website
+  description: A website for discovering and sharing information about cafes.
+  image: coffee.png
+  github: https://github.com/DeanJ93/Cafe_website
+  demo:

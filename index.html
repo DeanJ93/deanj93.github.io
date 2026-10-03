@@ -1,69 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev With Dean</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="images/code.svg">
-</head>
-<body>  
-    <header>
+---
+layout: home
+title: Home
+---
+
+<section id="about" class="about">
     <div class="container">
-        <img id="header-img" src="images/code.svg">
-        <h1>Dev with Dean</h1>
-        <p>Programmer - IT Professional</p>
-        <a href="#about" class="btn">About Me</a>
-        <a href="#projects" class="btn">See my work</a>
-        <div class="social-links">
-            <a href="https://x.com/devwithdean" target="_blank"><img src="images/twitter.svg" alt="Twitter"></a>
-            <a href="https://www.instagram.com/devwithdean/" target="_blank"><img src="images/instagram.svg" alt="instagram"></a>
-            <a href="https://www.reddit.com/user/StomachExpert8659/" target="_blank"><img src="images/reddit.svg" alt="reddit"></a>
-            <a href="https://github.com/DeanJ93" target="_blank"><img src="images/github.svg" alt="github"></a>
+        <h2>About Me</h2>
+        <p>Hi, I'm Dean. I'm a self-taught programmer. I have a passion for development and enjoy working on exciting and challenging projects.</p>
+        <a href="{{ site.baseurl }}/about/" class="btn">Learn More About Me</a>
+    </div>
+</section>
+
+{% assign recent_posts = site.posts | limit: 3 %}
+{% if recent_posts.size > 0 %}
+<section class="latest-posts">
+    <div class="container">
+        <h2>Latest Blog Posts</h2>
+        <div class="post-grid">
+            {% for post in recent_posts %}
+            <article class="post-card">
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                <a href="{{ post.url | relative_url }}" class="btn">Read More</a>
+            </article>
+            {% endfor %}
+        </div>
+        <div class="view-all">
+            <a href="{{ site.baseurl }}/blog/" class="btn">View All Posts</a>
         </div>
     </div>
-</header>
-    
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hi, I'm Dean. I'm a self-taught programmer. I have a passion for development and enjoy working on exciting and challenging projects.</p>
-        </div>
-    </section>
+</section>
+{% endif %}
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-gallery">
-                <div class="card">
-                    <img src="images/space.svg" alt="spaceship">
-                      <h3><b>space invaders</b></h3> 
-                      <p>A space invaders game built with Python and Turtle Graphics</p>
-                      <a href="https://github.com/DeanJ93/space_invaders/tree/main" target="_blank" class="btn">Github</a>
-                  </div>
-                  <div class="card">
-                    <img src="images/question.svg" alt="question mark">
-                      <h3><b>quiz game</b></h3> 
-                      <p>A quiz game written in JavaScript that uses the Open Trivia Database.</p>
-                      <a href="https://github.com/DeanJ93/JSQuizGame" target="_blank" class="btn">Github</a>
-                      <a href="http://devwithdean.com/JSQuizGame/" target="_blank" class="btn">Live Demo</a>
-                  </div> 
-                <div class="card">
-                    <img src="images/coffee.png" alt="coffee cup">
-                      <h3><b>Cafe Website</b></h3> 
-                      <p>A website for discovering and sharing information about cafes.</p>
-                      <a href="https://github.com/DeanJ93/Cafe_website" target="_blank" class="btn">Github</a>
-                  </div>                    
+<section id="projects" class="projects">
+    <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="project-gallery">
+            {% for project in site.data.projects %}
+            <div class="card">
+                <img src="{{ site.baseurl }}/assets/images/{{ project.image }}" alt="{{ project.name }}">
+                <h3><b>{{ project.name }}</b></h3>
+                <p>{{ project.description }}</p>
+                <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+                {% if project.demo %}
+                <a href="{{ project.demo }}" target="_blank" rel="noopener noreferrer" class="btn">Live Demo</a>
+                {% endif %}
             </div>
+            {% endfor %}
         </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Dev With Dean. All rights reserved.</p>
-            <p>Image by <a href="https://pixabay.com/users/shafin_protic-16278454/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6127616" target="_blank">Shafin Al Asad Protic</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6127616" target="_blank">Pixabay</a></p>
-            <div> Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+        <div class="view-all">
+            <a href="{{ site.baseurl }}/projects/" class="btn">View All Projects</a>
         </div>
-    </footer>
-</body>
-</html>
+    </div>
+</section>

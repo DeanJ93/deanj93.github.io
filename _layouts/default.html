@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/images/code.svg">
+    {% seo %}
+    {% feed_meta %}
+</head>
+<body>  
+    {% include header.html %}
+    
+    <main>
+        {{ content }}
+    </main>
+    
+    {% include footer.html %}
+
+    {% unless page.url == '/' %}
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            if (location.hash) return;
+            var heading = document.querySelector('main h1, main h2, main h3, main h4, main h5, main h6');
+            if (heading) heading.scrollIntoView({ block: 'start' });
+        });
+    </script>
+    {% endunless %}
+</body>
+</html>
