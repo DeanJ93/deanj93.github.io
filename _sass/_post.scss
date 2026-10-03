@@ -10,7 +10,9 @@
     .post-header {
         margin-bottom: $spacing-large;
         border-bottom: 2px solid $light-bg;
-        padding-bottom: $spacing-medium;
+        border-radius: $border-radius;
+        padding: $spacing-medium;
+        background: $secondary-color;
         
         .post-title {
             margin-bottom: $spacing-small;
@@ -19,7 +21,7 @@
         }
         
         .post-meta {
-            color: $text-light;
+            color: $white;
             font-size: 0.95em;
             
             time {

@@ -14,11 +14,11 @@ I embarked on my programming journey driven by curiosity and a desire to create.
 
 I enjoy building projects that solve real problems and exploring new technologies. From game development with Python to web applications with JavaScript, I'm always eager to learn and grow as a developer.
 
-## Skills & Technologies
+<!-- ## Skills & Technologies
 
-- **Languages:** Python, JavaScript, HTML, CSS
-- **Technologies:** Jekyll, GitHub Pages, Turtle Graphics
-- **Interests:** Web Development, Game Development, Open Source
+ - **Languages:** Python, JavaScript, HTML, CSS
+ - **Technologies:** Jekyll, GitHub Pages, Turtle Graphics
+ - **Interests:** Web Development, Game Development, Open Source -->
 
 ## Connect With Me
 
